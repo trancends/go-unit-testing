@@ -18,16 +18,14 @@ func TestGreetings(t *testing.T) {
 	})
 }
 
-func TestGreetingsBen(t *testing.T) {
-	result := Greetings("Ben")
-
-	// if result != "Hello, Ben" {
-	// 	t.Error("Wrong Result: " + result)
-	// }
-	assert.Equal(t, "Hello, Ben", result, "Result should be 'Hello, Ben'")
+func TestHitung(t *testing.T) {
+	t.Run("10+20", func(t *testing.T) {
+		result := Hitung(10, 20)
+		assert.Equal(t, 30, result, fmt.Sprintf("Result should be:%v", 30))
+	})
 }
 
-func TestHitung(t *testing.T) {
+func TestHitung2(t *testing.T) {
 	testTable := []struct {
 		name     string
 		x        int

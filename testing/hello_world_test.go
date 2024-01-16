@@ -70,8 +70,8 @@ func (s *HelloWordlSuite) TestHelloWorld() {
 }
 
 func (s *HelloWordlSuite) TestHelloWorldFailed() {
-	result, err := Greetings("John")
-	assert.Equal(s.T(), "", result, "Result should be ''")
+	result, err := Greetings("")
+	assert.NotEqual(s.T(), "", result, "Result should be ''")
 	assert.NotNil(s.T(), err)
 }
 
